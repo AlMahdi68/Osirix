@@ -1,0 +1,33 @@
+{
+  "project_type": "react",
+  "ai_config": {
+    "chat_assistant": {
+      "model": "openai-gpt-4o",
+      "temperature": 0.7,
+      "maxTokens": 4000,
+      "system_prompt": "You are Hustler, an AI assistant specializing in social media content creation and business growth. Help users maximize their reach and revenue."
+    },
+    "text_generator": {
+      "model": "openai-gpt-4o",
+      "temperature": 0.8,
+      "maxTokens": 2000,
+      "system_prompt": "You are a creative content writer. Generate engaging social media content."
+    },
+    "video_generator": {
+      "model": "veo3",
+      "maxTokens": 1000
+    },
+    "image_generator": {
+      "model": "gpt-image-1",
+      "size": "1024x1024",
+      "quality": "medium",
+      "response_format": "b64_json",
+      "n": 1
+    },
+    "voice_generator": {
+      "model": "openai-gpt-4o",
+      "temperature": 0.5,
+      "maxTokens": 1000
+    }
+  }
+}
