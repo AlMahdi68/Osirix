@@ -21,8 +21,14 @@ import Onboarding from './pages/Onboarding';
 import About from './pages/About';
 import TermsAndConditions from './pages/TermsAndConditions';
 
-// Initialize Stripe
-const stripePromise = loadStripe('pk_test_51234567890');
+// Initialize Stripe with environment variable
+const stripePromise = loadStripe(
+  import.meta.env.VITE_STRIPE_PUBLIC_KEY || 'pk_test_51234567890'
+);
+
+if (!import.meta.env.VITE_STRIPE_PUBLIC_KEY) {
+  console.warn('Warning: VITE_STRIPE_PUBLIC_KEY is not set. Using test key.');
+}
 
 function App() {
   return (
